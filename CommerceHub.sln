@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37314.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceHub.Domain", "CommerceHub.Domain\CommerceHub.Domain.csproj", "{B19BB3E5-006E-467A-9B11-9D545795CF30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommerceHub.Service", "CommerceHub.Service\CommerceHub.Service.csproj", "{C02DDB7F-DF22-4811-9FC4-B78CA51089D3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B19BB3E5-006E-467A-9B11-9D545795CF30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B19BB3E5-006E-467A-9B11-9D545795CF30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B19BB3E5-006E-467A-9B11-9D545795CF30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B19BB3E5-006E-467A-9B11-9D545795CF30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C02DDB7F-DF22-4811-9FC4-B78CA51089D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C02DDB7F-DF22-4811-9FC4-B78CA51089D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C02DDB7F-DF22-4811-9FC4-B78CA51089D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C02DDB7F-DF22-4811-9FC4-B78CA51089D3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D952ECF0-4BF6-451F-952E-3E4725BB4F76}
+	EndGlobalSection
+EndGlobal
