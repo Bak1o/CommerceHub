@@ -18,7 +18,7 @@ namespace CommerceHub.Domain.Entities.Models
         public int CategoryId { get; set; }
         public string OwnerId { get; set; }
 
-        private Product()
+        public Product()
         {
 
         }
@@ -50,5 +50,6 @@ namespace CommerceHub.Domain.Entities.Models
                 CategoryId = command.CategoryId.Value;
 
         }
+       
     }
 }

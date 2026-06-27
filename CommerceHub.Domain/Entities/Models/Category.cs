@@ -11,21 +11,17 @@ namespace CommerceHub.Domain.Entities.Models
     {
         public int Id { get; set; }
         public string Name { get; private set; }
-        private Category()
+        public Category()
         {
 
         }
-        public void AddCategory(CategoryCommand command)
+        public void SetName(CategoryCommand command)
         {
             command.Validate();
             Name = command.Name;
             
         }
-        public void ChangeCategory(CategoryCommand command)
-        {
-            command.Validate();
-            Name = command.Name;
-        }
+        
        
     }
 }

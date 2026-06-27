@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommerceHub.Domain.Commands.Abstractions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace CommerceHub.Domain.Commands
 {
-    public class RemoveFromCartCommand
+    public class UpdateQuantityInCartCommand : CartCommand
     {
-        public int ProductId {  get; set; }
+        
     }
 }

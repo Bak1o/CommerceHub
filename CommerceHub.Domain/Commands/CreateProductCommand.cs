@@ -1,6 +1,8 @@
-﻿using System;
+﻿using CommerceHub.Domain.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,16 +20,20 @@ namespace CommerceHub.Domain.Commands
 
         public void Validate()
         {
-            if (Name.Length < 1 || Name.Length > 100)
-                throw new ArgumentException();
-            if (Brand.Length < 1 || Brand.Length > 100)
-                throw new ArgumentException();
+            if (string.IsNullOrWhiteSpace(Name) || Name.Length > 100)
+                throw new ValidationException(nameof(Name) + " Lenght");
+            if (string.IsNullOrWhiteSpace(Brand) || Brand.Length > 100)
+                throw new ValidationException(nameof(Brand) + " Lenght");
             if (Price < 0)
-                throw new ArgumentException();
+                throw new ValidationException(nameof(Price) + " Must not be Negative");
             if (Stock < 0)
-                throw new ArgumentException();
-            if (Description.Length < 1 || Description.Length > 4000)
-                throw new ArgumentException();
+                throw new ValidationException(nameof(Stock) + " Must not be negative");
+            if (string.IsNullOrWhiteSpace(Description) || Description.Length > 4000)
+                throw new ValidationException(nameof(Description) + " Lenght");
+            if (CategoryId <= 0)
+                throw new ValidationException(nameof(CategoryId) + " is required");
+            if (string.IsNullOrWhiteSpace(OwnerId))
+                throw new ValidationException(nameof(OwnerId) + " is required");
         }
     }
 }

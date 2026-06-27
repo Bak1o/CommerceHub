@@ -1,22 +1,23 @@
 ﻿using CommerceHub.Domain.Exceptions;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ValidationException = CommerceHub.Domain.Exceptions.ValidationException;
 
 namespace CommerceHub.Domain.Commands
 {
-    public class CategoryCommand
+    public class UpdateCategoryCommand
     {
+        public int Id { get; set; }
         public string Name { get; set; }
 
         public void Validate()
         {
+            if (Id <= 0)
+                throw new ValidationException("Id must be positive");
             if (string.IsNullOrWhiteSpace(Name))
-                throw new ValidationException(nameof(CategoryCommand) + " must not be empty");
+                throw new ValidationException(nameof(UpdateCategoryCommand) + " must not be empty");
             if (Name.Length > 100)
                 throw new ValidationException("Name too large");
         }
